@@ -1,12 +1,13 @@
-package com.wangfan.baseapplication.activity;
+package com.wangfan.qingfan.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.wangfan.baseapplication.R;
+import com.wangfan.qingfan.R;
+import com.wangfan.qingfan.base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -21,6 +22,16 @@ public class MainActivity extends AppCompatActivity {
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
         tv.setText(stringFromJNI());
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     /**

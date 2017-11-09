@@ -1,4 +1,4 @@
-package com.wangfan.baseapplication.base;
+package com.wangfan.qingfan.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

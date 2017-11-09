@@ -1,4 +1,4 @@
-package com.wangfan.baseapplication.application;
+package com.wangfan.qingfan.application;
 
 import android.app.ActivityManager;
 import android.app.Application;
@@ -12,7 +12,7 @@ public class BaseApplication extends Application {
 	public void onCreate() {
         context = getApplicationContext();
         //Bugly
-        CrashReport.initCrashReport(getApplicationContext(), "c5ca7fd5af", true);
+        CrashReport.initCrashReport(getApplicationContext(), "835e8188b2", true);
 		super.onCreate();
 	}
 

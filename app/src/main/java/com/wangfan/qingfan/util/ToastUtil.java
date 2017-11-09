@@ -1,4 +1,4 @@
-package com.wangfan.baseapplication.util;
+package com.wangfan.qingfan.util;
 
 import android.content.Context;
 import android.os.Handler;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.wangfan.baseapplication.R;
+import com.wangfan.qingfan.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

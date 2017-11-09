@@ -1,4 +1,4 @@
-package com.wangfan.baseapplication;
+package com.wangfan.qingfan;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.wangfan.baseapplication;
+package com.wangfan.qingfan;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -1,4 +1,4 @@
-package com.wangfan.baseapplication.util;
+package com.wangfan.qingfan.util;
 
 
 public class Config {

@@ -1,4 +1,4 @@
-package com.wangfan.baseapplication.util;
+package com.wangfan.qingfan.util;
 
 import android.content.Intent;
 import android.os.Bundle;

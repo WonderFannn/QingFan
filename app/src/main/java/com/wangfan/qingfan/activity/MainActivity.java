@@ -1,32 +1,29 @@
 package com.wangfan.qingfan.activity;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 
 import com.wangfan.qingfan.R;
 import com.wangfan.qingfan.base.BaseActivity;
 
-public class MainActivity extends BaseActivity {
+import butterknife.BindView;
 
-    // Used to load the 'native-lib' library on application startup.
-    static {
-        System.loadLibrary("native-lib");
-    }
+public class MainActivity extends BaseActivity implements View.OnClickListener {
+
+    @BindView(R.id.btn_ebo)
+    Button mButtonEbo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+        mButtonEbo.setOnClickListener(this);
     }
 
     @Override
     protected void initView() {
-
+        setContentView(R.layout.activity_main);
     }
 
     @Override
@@ -34,9 +31,16 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_ebo:
+                Intent intent = new Intent(this, EboParkingActivity.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
+    }
 }

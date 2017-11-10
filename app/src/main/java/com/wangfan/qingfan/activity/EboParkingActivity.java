@@ -2,6 +2,7 @@ package com.wangfan.qingfan.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -13,13 +14,15 @@ import com.wangfan.qingfan.base.BaseActivity;
 
 public class EboParkingActivity extends BaseActivity {
     String url;
-    private WebView mWebview;
+    private WebView mWebView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mWebview.loadUrl(url);
+        mWebView.loadUrl(url);
+        WebSettings webSettings = mWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         //设置不用系统浏览器打开,直接显示在当前Webview
-        mWebview.setWebViewClient(new WebViewClient() {
+        mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
@@ -31,8 +34,8 @@ public class EboParkingActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        mWebview = new WebView(this);
-        setContentView(mWebview);
+        mWebView = new WebView(this);
+        setContentView(mWebView);
     }
 
     @Override

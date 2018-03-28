@@ -41,4 +41,20 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="123dp" />
 
+    <Button
+        android:id="@+id/btn_TH"
+        android:layout_width="88dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TH"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toEndOf="@+id/btn_ebo"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.216" />
+
 </android.support.constraint.ConstraintLayout>

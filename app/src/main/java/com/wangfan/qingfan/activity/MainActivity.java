@@ -14,11 +14,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @BindView(R.id.btn_ebo)
     Button mButtonEbo;
-
+    @BindView(R.id.btn_TH)
+    Button mButtonTh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mButtonEbo.setOnClickListener(this);
+        mButtonTh.setOnClickListener(this);
     }
 
     @Override
@@ -38,6 +40,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn_ebo:
                 Intent intent = new Intent(this, EboParkingActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.btn_TH:
+                Intent intent1 = new Intent(this, CouponsActivity.class);
+                startActivity(intent1);
                 break;
             default:
                 break;

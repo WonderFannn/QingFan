@@ -1,31 +1,38 @@
 package com.wangfan.qingfan.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
-import com.wangfan.qingfan.R;
+import com.wangfan.baseapplication.R;
 import com.wangfan.qingfan.base.BaseActivity;
 
 import butterknife.BindView;
 
-public class MainActivity extends BaseActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity {
 
-    @BindView(R.id.btn_ebo)
-    Button mButtonEbo;
-    @BindView(R.id.btn_TH)
-    Button mButtonTh;
+
+    @BindView(R.id.btn_tianhong)
+    Button mBtnTianhong;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mButtonEbo.setOnClickListener(this);
-        mButtonTh.setOnClickListener(this);
+        setContentView(R.layout.activity_main);
+
+        // Example of a call to a native method
+        TextView tv = (TextView) findViewById(R.id.sample_text);
+        tv.setText("轻帆");
     }
 
     @Override
     protected void initView() {
-        setContentView(R.layout.activity_main);
+        mBtnTianhong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
@@ -34,19 +41,4 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_ebo:
-                Intent intent = new Intent(this, EboParkingActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_TH:
-                Intent intent1 = new Intent(this, CouponsActivity.class);
-                startActivity(intent1);
-                break;
-            default:
-                break;
-        }
-    }
 }

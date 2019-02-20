@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.wangfan.qingfan.R;
+import com.wangfan.baseapplication.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

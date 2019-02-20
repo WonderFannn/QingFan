@@ -12,7 +12,7 @@ public class BaseApplication extends Application {
 	public void onCreate() {
         context = getApplicationContext();
         //Bugly
-        CrashReport.initCrashReport(getApplicationContext(), "835e8188b2", true);
+        CrashReport.initCrashReport(getApplicationContext(), "c5ca7fd5af", true);
 		super.onCreate();
 	}
 
